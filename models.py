@@ -5,7 +5,7 @@ class Users(db.Model):
 	__tablename__ = 'Users'
 	userid = db.Column(db.Integer, primary_key=True, autoincrement=True)
 	username = db.Column(db.Integer, nullable=False)
-	password = db.Column(db.String(128), nullable=False)
+	userpassword = db.Column(db.String(128), nullable=False)
 	email = db.Column(db.String(128), nullable=False)
 	location = db.Column(db.String(128), nullable=False)
 
@@ -27,8 +27,8 @@ class TypeFood(db.Model):
 
 class Restaurant(db.Model):
 	__tablename__ = "Restaurant"
-	restaurantidid = db.Column(db.Integer, primary_key=True, autoincrement=True)
-	name = db.Column(db.String(128), nullable=False)
+	restaurantid = db.Column(db.Integer, primary_key=True, autoincrement=True)
+	restaurantname = db.Column(db.String(128), nullable=False)
 	address = db.Column(db.String(128))
 	state = db.Column(db.String(128))
 	pricepoint = db.Column(db.Integer)
